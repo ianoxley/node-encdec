@@ -28,5 +28,4 @@ your command prompt:
     git submodule init
     git submodule update
     
-The file [nodeunit](https://github.com/ianoxley/node-encdec/blob/master/nodeunit) is included as a convenience for running the nodeunit 
-tests, in case you [don't want to install nodeunit as an executable](https://github.com/caolan/nodeunit#adding-nodeunit-to-your-projects).
+To run the tests, you'll need [install nodeunit](https://github.com/caolan/nodeunit#installation) if you haven't done so already.
