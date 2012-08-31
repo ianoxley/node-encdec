@@ -11,7 +11,7 @@
     "test": "./test"
   },
   "scripts": {
-    "test": "nodeunit"
+    "test": "nodeunit ./test/test-encdec.js"
   },
   "repository": {
     "type": "git",
