@@ -28,4 +28,4 @@ your command prompt:
     git submodule init
     git submodule update
     
-To run the tests, you'll need [install nodeunit](https://github.com/caolan/nodeunit#installation) if you haven't done so already.
+To run the tests, you'll need to [install nodeunit](https://github.com/caolan/nodeunit#installation) if you haven't done so already.
