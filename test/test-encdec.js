@@ -37,6 +37,15 @@ exports.group = {
     test.done();
   },
 
+  testCache: function(test) {
+    test.expect(1);
+    var one = this.base58.encode(202);
+    var two = this.base58.decode('202');
+    var three = this.base58.encode(202);
+
+    test.ok(one === three);
+  },
+
   tearDown: function(callback) {
     callback();
   }
