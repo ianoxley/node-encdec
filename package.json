@@ -17,9 +17,6 @@
     "type": "git",
     "url": "git://github.com/ianoxley/node-encdec.git"
   },
-  "devDependencies": {
-    "nodeunit": ">0.7.x"
-  },
   "keywords": [
     "javascript",
     "encoding",
@@ -29,5 +26,11 @@
     "base64"
   ],
   "author": "Ian Oxley <ijoxley@gmail.com> (http://ianoxley.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodeunit": ">0.7.x",
+    "grunt": "~0.4.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-watch": "~0.4.2"
+  }
 }
