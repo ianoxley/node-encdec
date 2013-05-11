@@ -8,14 +8,11 @@ exports.group = {
   },
 
   testBase58Encode: function(test) {
-    test.expect(5);
-    test.equals(this.base58.encode(0), '');
+    test.expect(4);
+
+    test.equals(this.base58.encode(0), '1');
     test.equals(this.base58.encode(-1), '');
     test.equals(this.base58.encode(10002343), 'Tgmc');
-
-    // Call encode on the same number to check the cache
-    // returns the same result
-    test.equals(this.base58.encode(1000), 'if');
     test.equals(this.base58.encode(1000), 'if');
 
     test.done();
@@ -26,13 +23,10 @@ exports.group = {
 
     test.equals(this.base58.decode('Tgmc'), 10002343);
     test.equals(this.base58.decode('if'), 1000);
+    test.equals(this.base58.decode('1'), 0);
+    test.equals(this.base58.decode(''), -1);
 
-    // Call decode a few times on the same number to check the cache is
-    // working correctly
-    test.equals(this.base58.decode('if'), 1000); 
-    test.equals(this.base58.decode('if'), 1000); 
-
-    test.equals(this.base58.decode(''), 0);
+    test.equals(this.base58.decode({}), -1);
 
     test.done();
   },
