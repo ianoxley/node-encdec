@@ -6,8 +6,13 @@ module.exports = function(grunt) {
     jshint: {
       files: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
     },
-    nodeunit: {
-      all: ['test/**/*.js']
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'spec'
+        },
+        src: ['test/**/*.js']
+      }    
     },
     watch: {
       scripts: {
@@ -21,9 +26,9 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['test']);
-  grunt.registerTask('test', ['jshint', 'nodeunit']);
+  grunt.registerTask('test', ['jshint', 'mochaTest']);
 };
